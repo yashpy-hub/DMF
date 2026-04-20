@@ -15,11 +15,12 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-foreground hover:text-accent transition-colors">
-          <span className="font-serif">DM</span> Interiors
+        <Link href="/" className="text-xl sm:text-2xl font-bold text-foreground hover:text-accent transition-colors flex items-center gap-2">
+          <span className="font-serif bg-accent text-accent-foreground px-2 py-1 rounded">DM</span>
+          <span className="hidden xs:inline">Interiors</span>
         </Link>
 
         {/* Desktop Navigation */}

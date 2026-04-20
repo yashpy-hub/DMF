@@ -64,7 +64,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="section-padding bg-secondary/30">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-center mb-4 animate-fade-in-up">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-4 animate-fade-in-up">
             Get In Touch
           </h1>
           <p className="text-center text-muted-foreground text-lg animate-fade-in-up stagger-1">
@@ -81,7 +81,7 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                content: "+91 8208326652",
+                content: "+91 7083871807",
                 subtext: "Available 9 AM - 6 PM",
               },
               {

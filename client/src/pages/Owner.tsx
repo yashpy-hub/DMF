@@ -53,7 +53,7 @@ export default function Owner() {
             {/* Profile Information */}
             <div className="animate-slide-in-right">
               <div className="mb-8">
-                <h2 className="text-5xl md:text-6xl font-bold text-accent mb-2">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent mb-2">
                   TUKARAM BIRADAR
                 </h2>
                 <p className="text-xl font-semibold text-muted-foreground uppercase tracking-widest border-b-2 border-accent/20 pb-4 inline-block">

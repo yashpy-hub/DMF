@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Truck, Award, Wrench, Gift, MapPin, Phone, Mail } from "lucide-react";
+import { Truck, Award, Wrench, Gift, MapPin, Phone, Mail, Home as HomeIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,25 +10,25 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('/photos/homepage.jpg')",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0">
+          <img
+            src="/photos/homepage.jpg"
+            alt="DM Interiors Hero"
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 animate-fade-in-up">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up leading-tight">
             Transform Your Space
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in-up stagger-1">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in-up stagger-1 px-4">
             Premium Interior Design & Furniture Solutions for Your Dream Home
           </p>
           <Link href="/portfolio" className="animate-fade-in-up stagger-2 inline-block">
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-lg">
+            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-lg rounded-full shadow-lg transition-all hover:scale-105 active:scale-95">
               Explore Our Work
             </Button>
           </Link>
@@ -38,12 +38,17 @@ export default function Home() {
       {/* Services Section */}
       <section className="section-padding bg-secondary/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 animate-fade-in-up">
             Our Premium Services
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
+              {
+                icon: HomeIcon,
+                title: "Complete Flat & Home Design",
+                description: "End-to-end interior solutions for your 1BHK, 2BHK, 3BHK flats and villas",
+              },
               {
                 icon: Truck,
                 title: "Free Home Delivery",
@@ -51,7 +56,7 @@ export default function Home() {
               },
               {
                 icon: Award,
-                title: "15 Years Warranty On Commercials Furniture",
+                title: "15 Years Warranty",
                 description: "Extended warranty coverage on selected furniture items",
               },
               {
@@ -63,6 +68,11 @@ export default function Home() {
                 icon: Gift,
                 title: "1 Year Free Service",
                 description: "Complimentary maintenance for interior & furniture",
+              },
+              {
+                icon: Award,
+                title: "Premium Materials",
+                description: "We use only high-grade commercials furniture materials",
               },
             ].map((service, idx) => {
               const Icon = service.icon;
