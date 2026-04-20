@@ -2,12 +2,10 @@ import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
   const phoneNumber = "+917083871807";
-  // Pre-filled subject and message for the customer
-  const subject = "Inquiry about Interior/Furniture Work";
-  const body = "Hello sir! I am ready to work with you. I would like to discuss a project.";
+  // Updated pre-filled message as requested
+  const message = "Hello Sir! I want to work with you";
   
-  const fullMessage = `Subject: ${subject}\n\nMessage: ${body}`;
-  const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(fullMessage)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
   return (
     <motion.a
